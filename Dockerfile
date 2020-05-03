@@ -14,6 +14,6 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.54.0 && \
-  apk update && apk add python3 && \
+  apk update && apk add bash python3 && \
   pip3 install pipenv
 ENTRYPOINT ["serverless"]
