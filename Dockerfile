@@ -1,4 +1,4 @@
-FROM node:10-slim
+FROM current-alpine3.11
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
@@ -14,6 +14,6 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.54.0 && \
-  apt-get update && apt-get -y install python3-pip && \
+  apk update && apk add python3 && \
   pip3 install pipenv
 ENTRYPOINT ["serverless"]
