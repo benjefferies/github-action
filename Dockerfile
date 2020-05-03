@@ -1,5 +1,7 @@
 FROM node:10-slim
 
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/serverless/github-action"
