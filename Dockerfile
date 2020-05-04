@@ -14,7 +14,7 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.54.0 && \
-  apk update && apk add bash && \
+  apk update && apk add bash gettext moreutils && \
   apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ python3=3.7.5-r1 && \
   pip3 install pipenv
 ENTRYPOINT ["serverless"]
